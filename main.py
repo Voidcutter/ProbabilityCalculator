@@ -17,9 +17,9 @@ class Hat:
        
     def draw(self, num):
         # num = number of balls picked
-        if num > len(self.contents_clone):
+        if num >= len(self.contents_clone):
             return self.contents
-        elif len(self.contents) >= num:
+        elif len(self.contents) > num:
             picked = random.sample(self.contents, num)
             for i in picked:
                 self.contents.remove(i)
